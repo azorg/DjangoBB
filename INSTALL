@@ -1,0 +1,77 @@
+Prepare development tree
+========================
+(tested under Ubuntu 14.04)
+
+
+Prepare virtual enviroment
+--------------------------
+
+  Edit and run ./_env_make.sh (set necessary proxy)
+
+  Edit ./_env_pip.sh (select REQUIREMENTS and proxy)
+  Run ./_env_pip.sh
+
+
+Pull different django source and examples
+-----------------------------------------
+
+  Edit and run ./clones-get.sh
+
+
+Installing dependencies from source
+-----------------------------------
+
+  If you select REQUIREMENTS="requirements-pypi.conf"
+  (not REQUIREMENTS="requirements-all.conf")
+  edit and run ./_env_src.sh
+
+
+Prepare project config
+-----------------------
+
+  cd src/base_project
+  cp local_settings_skel.py local_settings.py
+  vim local_settings.py (edit and set your private options)
+
+
+Check installation - run Django python shell
+--------------------------------------------
+
+  Run ./_shell.sh
+
+
+Collect static files and create sqlite data base
+------------------------------------------------
+  
+  Edit and run ./_collect_and_sync.sh
+
+
+Compile *.mo files
+------------------
+
+  cd src/djangobb_forum
+  python ../manage.py compilemessages
+
+  cd src/base_project
+  python ../manage.py compilemessages
+
+
+Run development server
+----------------------
+
+  Run ./_runserver.sh (or cd src && python manage.py runserver)
+  open web browser and go to http://127.0.0.1:8000/forum/
+
+
+Graphic view database structure
+-------------------------------
+
+  Edit and run ./_graph_models.sh
+
+
+Clean development tree
+----------------------
+
+  Edit and run ./clean.sh
+
+
