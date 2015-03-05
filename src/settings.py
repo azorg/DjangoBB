@@ -1,0 +1,1 @@
+basic_project/settings.py

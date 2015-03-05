@@ -52,52 +52,9 @@ class ForumTimeNode(template.Node):
         formatted_time = mark_safe(formatted_time)
         return formatted_time
 
-
-# TODO: this old code requires refactoring
 @register.inclusion_tag('djangobb_forum/pagination.html', takes_context=True)
-def pagination(context, adjacent_pages=1):
-    """
-    Return the list of A tags with links to pages.
-    """
-    page_range = range(
-        max(1, context['page'] - adjacent_pages),
-        min(context['pages'], context['page'] + adjacent_pages) + 1)
-    previous = None
-    next = None
-
-    if not 1 == context['page']:
-        previous = context['page'] - 1
-
-    if not 1 in page_range:
-        page_range.insert(0, 1)
-        if not 2 in page_range:
-            page_range.insert(1, '.')
-
-    if not context['pages'] == context['page']:
-        next = context['page'] + 1
-
-    if not context['pages'] in page_range:
-        if not context['pages'] - 1 in page_range:
-            page_range.append('.')
-        page_range.append(context['pages'])
-    get_params = '&'.join(['%s=%s' % (x[0], x[1]) for x in
-        context['request'].GET.iteritems() if (x[0] != 'page' and x[0] != 'per_page')])
-    if get_params:
-        get_params = '?%s&' % get_params
-    else:
-        get_params = '?'
-
-    return {
-        'get_params': get_params,
-        'previous': previous,
-        'next': next,
-        'page': context['page'],
-        'pages': context['pages'],
-        'page_range': page_range,
-        'results_per_page': context['results_per_page'],
-        'is_paginated': context['is_paginated'],
-        }
-
+def pagination(context):
+    return paginate(context)
 
 @register.inclusion_tag('djangobb_forum/lofi/pagination.html', takes_context=True)
 def lofi_pagination(context):

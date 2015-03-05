@@ -8,7 +8,7 @@
 {% autopaginate posts forum_settings.TOPIC_PAGE_SIZE %}
 <div class="linkst">
 	<div class="inbox">
-		<div class="pagelink conl">{% paginate %}</div>
+		<div class="pagelink conl">{% pagination %}</div>
 		<ul>
 			<li>
 			<a href="{% url 'djangobb:index' %}">{% trans "Root" %} </a></li><li>&raquo; {% link topic.forum %} </li><li>&raquo; {{ topic.name }}
@@ -166,7 +166,7 @@
 {% endfor %}
 <div class="postlinksb">
 	<div class="inbox">
-		<div class="pagelink conl">{% paginate %}</div>
+		<div class="pagelink conl">{% pagination %}</div>
 		<ul>
 			<li>
 			<a href="{% url 'djangobb:index' %}">{% trans "Root" %} </a></li><li>&raquo; {% link topic.forum %} </li><li>&raquo; {{ topic.name }}

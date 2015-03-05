@@ -1,21 +1,22 @@
-{% load i18n %}
 {% if is_paginated %}
-	{% trans "Pages" %}: 
-	{% if previous %}
-		<a href="{{ get_params }}page={{ previous }}{#&per_page={{ results_per_page }}#}">&laquo;</a>
-	{% endif %}
-	{% for number in page_range %}
-		{% if number == "." %}
-		{% else %}
-			{% if number == page %}
-				<strong>{{ number }}</strong> 
-			{% endif %}
-			{% if number != page %}
-				<a href="{{ get_params }}page={{ number }}{#&per_page={{ results_per_page }}#}">{{ number }}</a>
-			{% endif %}
-		{% endif %}
-	{% endfor %}
-	{% if next %} 
-		<a href="{{ get_params }}page={{ next }}{#&per_page={{ results_per_page }}#}">&raquo;</a>
-	{% endif %}
+{% load i18n %}
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}{{ getvars }}{{ hashtag }}" class="prev">&lsaquo;&lsaquo;</a>
+    {% endif %}
+    {% for page in pages %}
+        {% if page %}
+            {% ifequal page page_obj.number %}
+                <span class="current page">{{ page }}</span>
+            {% else %}
+                <a href="?page={{ page }}{{ getvars }}{{ hashtag }}" class="page">{{ page }}</a>
+            {% endifequal %}
+        {% else %}
+            ...
+        {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{{ getvars }}{{ hashtag }}" class="next">&rsaquo;&rsaquo;</a>
+    {% endif %}
+</div>
 {% endif %}
