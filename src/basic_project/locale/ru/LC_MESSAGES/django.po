@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-05 23:14+0300\n"
+"POT-Creation-Date: 2015-03-06 00:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -231,7 +231,7 @@ msgstr "Написать сообщене и отправить"
 
 #: templates/django_messages/compose.html:31
 msgid "Send"
-msgstr "Отправлено"
+msgstr "Отправить"
 
 #: templates/django_messages/inbox.html:6
 #: templates/django_messages/menu_pm.html:7
@@ -267,7 +267,7 @@ msgstr "Отправлено"
 
 #: templates/django_messages/menu_pm.html:9
 msgid "Send new message"
-msgstr "Отправить"
+msgstr "Написать новое"
 
 #: templates/django_messages/outbox.html:6
 msgid "Outbox"

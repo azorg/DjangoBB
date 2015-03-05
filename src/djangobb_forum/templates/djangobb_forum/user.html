@@ -14,25 +14,29 @@
 						<dl>
 							<dt>{% trans "Username:" %} </dt>
 							<dd>{{ profile }}</dd>
-							<dt>{% trans "Title" %} </dt>
-							<dd>{{ profile.forum_profile.status }}</dd>
+							
+							{% if profile.forum_profile.status %}
+								<dt>{% trans "Title" %} </dt>
+								<dd>{{ profile.forum_profile.status }}</dd>
+							{% endif %}
+	
 							<dt>{% trans "Real name:" %} </dt>
 							{% if profile.first_name or profile.last_name %}
 								<dd>{{ profile.first_name }} {{ profile.last_name }}</dd>
 							{% else %}
 								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
+							
 							<dt>{% trans "Location" %} </dt>
 							{% if profile.forum_profile.location %}
 								<dd>{{ profile.forum_profile.location }}</dd>
 							{% else %}
 								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
-							<dt>{% trans "Website:" %} </dt>
+
 							{% if profile.forum_profile.site %}
+								<dt>{% trans "Website:" %} </dt>
 								<dd>{{ profile.forum_profile.site|urlize }}</dd>
-							{% else %}
-								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
 							
 							{% if forum_settings.USER_TO_USER_EMAIL %}
@@ -63,29 +67,27 @@
 							{% else %}
 								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
+
 							<dt>{% trans "ICQ:" %} </dt>
 							{% if profile.forum_profile.icq %}
 								<dd>{{ profile.forum_profile.icq }}</dd>
 							{% else %}
 								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
-							<dt>{% trans "MSN Messenger:" %} </dt>
+
 							{% if profile.forum_profile.msn %}
+								<dt>{% trans "MSN Messenger:" %} </dt>
 								<dd>{{ profile.forum_profile.msn }}</dd>
-							{% else %}
-								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
-							<dt>{% trans "AOL IM:" %} </dt>
+
 							{% if profile.forum_profile.aim %}
+								<dt>{% trans "AOL IM:" %} </dt>
 								<dd>{{ profile.forum_profile.aim }}</dd>
-							{% else %}
-								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
-							<dt>{% trans "Yahoo! Messenger:" %} </dt>
+
 							{% if profile.forum_profile.yahoo %}
+								<dt>{% trans "Yahoo! Messenger:" %} </dt>
 								<dd>{{ profile.forum_profile.yahoo }}</dd>
-							{% else %}
-								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
 						</dl>
 						<div class="clearer"></div>
@@ -103,11 +105,10 @@
 							{% else %}
 								<dd>{% trans "(No avatar)" %}</dd>
 							{% endif %}
-							<dt>{% trans "Signature:" %} </dt>
+
 							{% if profile.forum_profile.signature_html %}
+								<dt>{% trans "Signature:" %} </dt>
 								<dd>{{ profile.forum_profile.signature_html|safe }}</dd>
-							{% else %}
-								<dd>{% trans "(Unknown)" %}</dd>
 							{% endif %}
 						</dl>
 						<div class="clearer"></div>
@@ -120,7 +121,11 @@
 					<div class="infldset">
 						<dl>
 							<dt>{% trans "Posts:" %} </dt>
-							<dd>{{ profile.forum_profile.post_count }} - <a href="{% url 'djangobb:search' %}?action=show_user&amp;user_id={{ profile.id }}">{% trans "Show all posts" %}</a></dd>
+							<dd>{{ profile.forum_profile.post_count }}
+							{% if user.is_authenticated %}
+								-
+								<a href="{% url 'djangobb:search' %}?action=show_user&amp;user_id={{ profile.id }}">{% trans "Show all posts" %}</a></dd>
+							{% endif %}
 							<dt>{% trans "Last post:" %} </dt>
 							{% if profile.forum_profile.last_post %}
 								<dd>{{ profile.forum_profile.last_post }}</dd>

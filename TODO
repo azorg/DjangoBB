@@ -1,0 +1,8 @@
+fix Lo-Fi pagination ("None" output)
+
+fix pagiantion (overlap, etc)
+
+fix 404 error if anonimous user search user messges from profile [user.html FIXED]
+
+"Real name" and Status "dance" in user profile [user.html FIXED]
+

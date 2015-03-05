@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DjangoBB\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-05 23:13+0300\n"
+"POT-Creation-Date: 2015-03-06 00:48+0300\n"
 "PO-Revision-Date: 2012-02-14 08:21+0000\n"
 "Last-Translator: slav0nic <slav0nic0@gmail.com>, Alex Zorg <azorg@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,7 +117,7 @@ msgstr "Только в заголовках тем"
 msgid "Attachment"
 msgstr "Прикреплённые файлы"
 
-#: forms.py:55 templates/djangobb_forum/topic.html:181
+#: forms.py:55 templates/djangobb_forum/topic.html:180
 msgid "Subscribe"
 msgstr "Получать уведомления"
 
@@ -402,7 +402,7 @@ msgstr "AIM"
 msgid "Yahoo"
 msgstr "Yahoo"
 
-#: models.py:312 templates/djangobb_forum/user.html:25
+#: models.py:312 templates/djangobb_forum/user.html:30
 msgid "Location"
 msgstr "Местонахождение"
 
@@ -682,7 +682,7 @@ msgstr "Вы подписаны на данную тему."
 #: templates/djangobb_forum/forum.html:73
 #: templates/djangobb_forum/moderate.html:11
 #: templates/djangobb_forum/topic.html:14
-#: templates/djangobb_forum/topic.html:171
+#: templates/djangobb_forum/topic.html:172
 #: templates/djangobb_forum/lofi/forum.html:9
 #: templates/djangobb_forum/lofi/index.html:6
 #: templates/djangobb_forum/lofi/index.html:8
@@ -825,7 +825,7 @@ msgid "Jump to"
 msgstr "Перейти"
 
 #: templates/djangobb_forum/forum.html:92
-#: templates/djangobb_forum/topic.html:210
+#: templates/djangobb_forum/topic.html:209
 msgid "Go"
 msgstr "Перейти"
 
@@ -989,7 +989,7 @@ msgid "Moderated by"
 msgstr "Модераторы"
 
 #: templates/djangobb_forum/move_topic.html:7
-#: templates/djangobb_forum/topic.html:216
+#: templates/djangobb_forum/topic.html:215
 msgid "Move topic"
 msgstr "Перенести тему"
 
@@ -1157,13 +1157,13 @@ msgid "From:"
 msgstr "От:"
 
 #: templates/djangobb_forum/topic.html:85
-#: templates/djangobb_forum/user.html:130
+#: templates/djangobb_forum/user.html:135
 #: templates/djangobb_forum/profile/profile_essentials.html:81
 msgid "Registered:"
 msgstr "Зарегистрирован:"
 
 #: templates/djangobb_forum/topic.html:86
-#: templates/djangobb_forum/user.html:122
+#: templates/djangobb_forum/user.html:123
 #: templates/djangobb_forum/profile/profile_essentials.html:83
 msgid "Posts:"
 msgstr "Сообщения:"
@@ -1173,7 +1173,7 @@ msgid "IP:"
 msgstr "IP:"
 
 #: templates/djangobb_forum/topic.html:105
-#: templates/djangobb_forum/user.html:44
+#: templates/djangobb_forum/user.html:48
 #: templates/djangobb_forum/profile/profile_essentials.html:42
 msgid "Send e-mail"
 msgstr "Отправить e-mail"
@@ -1206,35 +1206,35 @@ msgstr "Цитировать целиком или часть текста да�
 msgid "Quote"
 msgstr "Цитировать"
 
-#: templates/djangobb_forum/topic.html:179
+#: templates/djangobb_forum/topic.html:178
 msgid "Unsubscribe"
 msgstr "Запретить уведомления"
 
-#: templates/djangobb_forum/topic.html:199
+#: templates/djangobb_forum/topic.html:198
 msgid "Jump to "
 msgstr "Перейти"
 
-#: templates/djangobb_forum/topic.html:213
+#: templates/djangobb_forum/topic.html:212
 msgid "Moderator control"
 msgstr "Модераторировать"
 
-#: templates/djangobb_forum/topic.html:215
+#: templates/djangobb_forum/topic.html:214
 msgid "Delete multiple posts"
 msgstr "Удалить сообщения"
 
-#: templates/djangobb_forum/topic.html:218
+#: templates/djangobb_forum/topic.html:217
 msgid "Open topic"
 msgstr "Открыть тему"
 
-#: templates/djangobb_forum/topic.html:220
+#: templates/djangobb_forum/topic.html:219
 msgid "Close topic"
 msgstr "Закрыть тему"
 
-#: templates/djangobb_forum/topic.html:223
+#: templates/djangobb_forum/topic.html:222
 msgid "Unstick topic"
 msgstr "Убрать выделение"
 
-#: templates/djangobb_forum/topic.html:225
+#: templates/djangobb_forum/topic.html:224
 msgid "Stick topic"
 msgstr "Выделить тему"
 
@@ -1273,91 +1273,88 @@ msgstr "Персональный"
 msgid "Username:"
 msgstr "Пользователь:"
 
-#: templates/djangobb_forum/user.html:17
+#: templates/djangobb_forum/user.html:19
 #: templates/djangobb_forum/users.html:48
 msgid "Title"
 msgstr "Статус"
 
-#: templates/djangobb_forum/user.html:19
+#: templates/djangobb_forum/user.html:23
 msgid "Real name:"
 msgstr "Настоящее имя:"
 
-#: templates/djangobb_forum/user.html:23 templates/djangobb_forum/user.html:29
-#: templates/djangobb_forum/user.html:35 templates/djangobb_forum/user.html:64
-#: templates/djangobb_forum/user.html:70 templates/djangobb_forum/user.html:76
-#: templates/djangobb_forum/user.html:82 templates/djangobb_forum/user.html:88
-#: templates/djangobb_forum/user.html:110
-#: templates/djangobb_forum/user.html:128
+#: templates/djangobb_forum/user.html:27 templates/djangobb_forum/user.html:34
+#: templates/djangobb_forum/user.html:68 templates/djangobb_forum/user.html:75
+#: templates/djangobb_forum/user.html:133
 msgid "(Unknown)"
 msgstr "(Неизвестно)"
 
-#: templates/djangobb_forum/user.html:31
+#: templates/djangobb_forum/user.html:38
 msgid "Website:"
 msgstr "Сайт:"
 
-#: templates/djangobb_forum/user.html:39
+#: templates/djangobb_forum/user.html:43
 msgid "E-mail:"
 msgstr "E-mail:"
 
-#: templates/djangobb_forum/user.html:46
+#: templates/djangobb_forum/user.html:50
 msgid "(Hidden)"
 msgstr "(Скрыто)"
 
-#: templates/djangobb_forum/user.html:57
+#: templates/djangobb_forum/user.html:61
 #: templates/djangobb_forum/profile/profile_menu.html:9
 #: templates/djangobb_forum/profile/profile_messaging.html:9
 msgid "Messaging"
 msgstr "Интернет контакты"
 
-#: templates/djangobb_forum/user.html:60
+#: templates/djangobb_forum/user.html:64
 msgid "Jabber:"
 msgstr "Jabber:"
 
-#: templates/djangobb_forum/user.html:66
+#: templates/djangobb_forum/user.html:71
 msgid "ICQ:"
 msgstr "ICQ:"
 
-#: templates/djangobb_forum/user.html:72
+#: templates/djangobb_forum/user.html:79
 msgid "MSN Messenger:"
 msgstr "MSN Messenger:"
 
-#: templates/djangobb_forum/user.html:78
+#: templates/djangobb_forum/user.html:84
 msgid "AOL IM:"
 msgstr "AOL IM:"
 
-#: templates/djangobb_forum/user.html:84
+#: templates/djangobb_forum/user.html:89
 msgid "Yahoo! Messenger:"
 msgstr "Yahoo! Messenger:"
 
-#: templates/djangobb_forum/user.html:97
+#: templates/djangobb_forum/user.html:99
 #: templates/djangobb_forum/profile/profile_menu.html:10
 #: templates/djangobb_forum/profile/profile_personality.html:9
 msgid "Personality"
 msgstr "Индивидуальный"
 
-#: templates/djangobb_forum/user.html:100
+#: templates/djangobb_forum/user.html:102
 msgid "Avatar:"
 msgstr "Аватар:"
 
-#: templates/djangobb_forum/user.html:104
+#: templates/djangobb_forum/user.html:106
 msgid "(No avatar)"
 msgstr "(Аватар отсутсвует)"
 
-#: templates/djangobb_forum/user.html:106
+#: templates/djangobb_forum/user.html:110
 msgid "Signature:"
 msgstr "Подпись:"
 
-#: templates/djangobb_forum/user.html:119
+#: templates/djangobb_forum/user.html:120
 #: templates/djangobb_forum/profile/profile_essentials.html:79
 msgid "User activity"
 msgstr "Активность пользователя"
 
-#: templates/djangobb_forum/user.html:123
+#: templates/djangobb_forum/user.html:127
 #: templates/djangobb_forum/profile/profile_essentials.html:84
 msgid "Show all posts"
 msgstr "Показать все сообщения"
 
-#: templates/djangobb_forum/user.html:124
+#: templates/djangobb_forum/user.html:129
 #: templates/djangobb_forum/profile/profile_essentials.html:82
 msgid "Last post:"
 msgstr "Последнее сообщение:"
