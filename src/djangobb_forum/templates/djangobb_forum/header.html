@@ -19,12 +19,16 @@
 					<li id="navadmin"><a href="{% url 'admin:index' %}">{% trans "Administration" %}</a></li>
 				{% endif %}
 				{% if user.is_authenticated %}
-					<li id="navprofile"><a href="{% url 'djangobb:forum_profile' user.username %}">{% trans "Profile" %}</a></li>
+					<li id="navprofile"><a href="{% url 'djangobb:forum_profile' request.user %}">{% trans "Profile" %}</a></li>
 					{% if forum_settings.PM_SUPPORT %}
-						<li id="navpm"><a href="{% url 'messages_inbox' %}">{% trans "PM" %}</a></li> 
+						<li id="navpm"><a href="{% url 'messages_inbox' %}">{% trans "PM" %}</a></li>
 					{% endif %}
+					<li id="navlogout"><a href="{% url 'user_signout' %}?next={{ request.path }}">{% trans "Log out" %}</a></li>
+				{% else %}
+                                        <li><a href="{% url 'user_signin' %}">{% trans "Log in" %}</a></li>
+					<li><a href="{% url 'registration_register' %}">{% trans "Sign up" %}</a></li>
 				{% endif %}
-			{% endblock %}
+				{% endblock %}
 			</ul>
 		</div>
 		<div id="brdwelcome" class="inbox">
@@ -58,7 +62,7 @@
 		<h2><span>{% trans "Notice" %}</span></h2>
 		<div class="box">
 			<div class="inbox">
-				<div>{{ forum_settings.NOTICE|safe }}</div>
+				<div>{{ forum_settings.NOTICe }}</div>Q
 			</div>
 		</div>
 	</div>
