@@ -19,7 +19,7 @@ rm -f get-pip.py
 #rm -f ./pip-cache
 
 # remove *.pyc
-./clean-pyc.sh
+./_clean-pyc.sh
 
 echo ">>> Remove models.dot, models.svg and models.png"
 rm -rf models.dot

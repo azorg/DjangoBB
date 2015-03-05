@@ -66,6 +66,7 @@ Run development server
 
   Run ./_runserver.sh (or cd src && python manage.py runserver)
   open web browser and go to http://127.0.0.1:8000/forum/
+  to admin go to http://127.0.0.1:8000/admin
 
 
 Graphic view database structure
@@ -79,4 +80,9 @@ Clean development tree
 
   Edit and run ./clean.sh
 
+
+Send mail from data base pool
+-----------------------------
+
+  Run ./_send_mail.sh
 

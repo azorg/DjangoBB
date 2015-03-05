@@ -8,6 +8,6 @@ cd -
 dot -Tsvg models.dot > models.svg
 rm -f models.dot
 
-#test -n $ok && firefox models.svg
+test -n $ok && firefox models.svg
 
 
