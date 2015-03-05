@@ -40,6 +40,11 @@ Check installation - run Django python shell
   Run ./_shell.sh
 
 
+Activate virtual python enviroment (in bash)
+
+  source env/bin/activate
+
+
 Collect static files and create sqlite data base
 ------------------------------------------------
   
