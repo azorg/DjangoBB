@@ -184,7 +184,7 @@ STATIC_ROOT = os.path.join(WWW_ROOT, 'static')
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_DIR, 'project_static'), # basic_project/project_static
+    os.path.join(PROJECT_DIR, 'static'), # basic_project/static
 )
 
 # List of finder classes that know how to find static files in
