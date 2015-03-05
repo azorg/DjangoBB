@@ -1,16 +1,41 @@
-*.py[co]
-*.egg-info
+.git
+.hg
+.bzr
 .pydevproject
 .project
 .settings
+.coverage
+.idea
+.build
+
+*.py[co]
 *.db
+*.sqlt3
 *.json
 *.log
 *~
-local_settings.py
+*.mo
+*.kpf
+*.autosave
+*.wpr
+*.egg
+*.egg-info
+
 env
 build/
 dist/
+logs
+pids/*
+clones
+pip-cache
 
+local_settings.py
 
+src/djangobb_index/*
+static_content/static/*
+static_content/media/*
+
+models.dot
+models.svg
+models.png
 
