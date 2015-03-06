@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DjangoBB\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-06 00:48+0300\n"
+"POT-Creation-Date: 2015-03-06 09:19+0400\n"
 "PO-Revision-Date: 2012-02-14 08:21+0000\n"
 "Last-Translator: slav0nic <slav0nic0@gmail.com>, Alex Zorg <azorg@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1001,10 +1001,6 @@ msgstr "Выберите назначение для переноса"
 msgid "Move to"
 msgstr "Перенести в"
 
-#: templates/djangobb_forum/pagination.html:3
-msgid "Pages"
-msgstr "Страницы"
-
 #: templates/djangobb_forum/report.html:7
 msgid "Report post"
 msgstr "Жалоба на сообщение"
@@ -1583,6 +1579,9 @@ msgstr ""
 "Выберете, каким образом вы хотите, чтобы ваш e-mail адрес отображался на "
 "форуме, и хотите ли вы, чтобы другие пользователи имели возможность слать "
 "вам e-mail сообщения через форум или нет."
+
+#~ msgid "Pages"
+#~ msgstr "Страницы"
 
 #~ msgid "Send a message"
 #~ msgstr "Отправить новое"

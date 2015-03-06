@@ -28,6 +28,7 @@ logs
 pids/*
 clones
 pip-cache
+get-pip.py
 
 local_settings.py
 

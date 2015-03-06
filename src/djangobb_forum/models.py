@@ -45,7 +45,9 @@ try:
 except ImportError:
     pass
 
-path = os.path.join(settings.STATIC_ROOT, 'djangobb_forum', 'themes')
+#!!!path = os.path.join(settings.STATIC_ROOT, 'djangobb_forum', 'themes')
+app_root = os.path.dirname(os.path.realpath(__file__))
+path = os.path.join(app_root, 'static', 'djangobb_forum', 'themes')
 if os.path.exists(path):
     # fix for collectstatic
     THEME_CHOICES = [(theme, theme) for theme in os.listdir(path)
