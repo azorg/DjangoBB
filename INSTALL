@@ -2,6 +2,12 @@ Prepare development tree
 ========================
 (tested under Ubuntu 14.04)
 
+Clone DjangoBBplus development tree (my sandbox)
+------------------------------------------------
+
+  git clone https://github.com/azorg/DjangoBBplus
+  cd DjangoBBplus
+
 
 Prepare virtual enviroment
 --------------------------
