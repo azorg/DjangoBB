@@ -2,7 +2,8 @@ add page navigation in topic list [SOLVED]
 
 block creation existing topic
 
-add feature some files attachment
+add feature some files attachment [SOLVED]
+Merge branch 'multiupload' of https://github.com/barsch/DjangoBB
 
 fix Lo-Fi pagination ("None" output) [lofi/pagination.html FIXED]
 
