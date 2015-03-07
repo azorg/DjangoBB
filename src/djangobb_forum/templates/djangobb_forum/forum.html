@@ -44,10 +44,13 @@
 										{% trans "Sticky:" %}
 									{% endif %}
 									{% if topic|has_unreads:user %}
-										<strong>{% link topic %} <span class="byuser">{% trans "by" %} {{ topic.user.username }}</span></strong>
+										<strong>{% link topic %} <span class="byuser">{% trans "created by" %} {{ topic.user.username }}</span></strong>
 									{% else %}
-										{% link topic %} <span class="byuser">{% trans "by" %} {{ topic.user.username }}</span>
+										{% link topic %} <span class="byuser">{% trans "created by" %} {{ topic.user.username }}</span>
 									{% endif %}
+								</div>
+								<div class="pagelink">
+									{% topic_pages topic forum_settings.TOPIC_PAGE_SIZE %}
 								</div>
 							</div>
 						</td>

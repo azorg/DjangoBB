@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DjangoBB\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-07 17:23+0300\n"
+"POT-Creation-Date: 2015-03-07 21:40+0300\n"
 "PO-Revision-Date: 2012-02-14 08:21+0000\n"
 "Last-Translator: slav0nic <slav0nic0@gmail.com>, Alex Zorg <azorg@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -679,7 +679,7 @@ msgstr "Вы подписаны на данную тему."
 #: templates/djangobb_forum/delete_posts.html:11
 #: templates/djangobb_forum/edit_post.html:8
 #: templates/djangobb_forum/forum.html:14
-#: templates/djangobb_forum/forum.html:73
+#: templates/djangobb_forum/forum.html:76
 #: templates/djangobb_forum/moderate.html:11
 #: templates/djangobb_forum/topic.html:13
 #: templates/djangobb_forum/topic.html:173
@@ -774,7 +774,7 @@ msgid "Go back"
 msgstr "Назад"
 
 #: templates/djangobb_forum/forum.html:12
-#: templates/djangobb_forum/forum.html:71
+#: templates/djangobb_forum/forum.html:74
 #: templates/djangobb_forum/includes/post_form.html:3
 msgid "New topic"
 msgstr "Создать новую тему"
@@ -804,7 +804,10 @@ msgstr "Важно:"
 
 #: templates/djangobb_forum/forum.html:47
 #: templates/djangobb_forum/forum.html:49
-#: templates/djangobb_forum/forum.html:56
+msgid "created by"
+msgstr "создал"
+
+#: templates/djangobb_forum/forum.html:59
 #: templates/djangobb_forum/forum_row.html:42
 #: templates/djangobb_forum/moderate.html:44
 #: templates/djangobb_forum/moderate.html:46
@@ -815,21 +818,21 @@ msgstr "Важно:"
 msgid "by"
 msgstr "оставил"
 
-#: templates/djangobb_forum/forum.html:60
+#: templates/djangobb_forum/forum.html:63
 #: templates/djangobb_forum/moderate.html:58
 msgid "Forum is empty."
 msgstr "Форум пуст."
 
-#: templates/djangobb_forum/forum.html:81
+#: templates/djangobb_forum/forum.html:84
 msgid "Jump to"
 msgstr "Перейти"
 
-#: templates/djangobb_forum/forum.html:92
+#: templates/djangobb_forum/forum.html:95
 #: templates/djangobb_forum/topic.html:211
 msgid "Go"
 msgstr "Перейти"
 
-#: templates/djangobb_forum/forum.html:96
+#: templates/djangobb_forum/forum.html:99
 msgid "Moderate forum"
 msgstr "Модерировать форум"
 
@@ -1002,6 +1005,7 @@ msgid "Move to"
 msgstr "Перенести в"
 
 #: templates/djangobb_forum/pagination.html:4
+#: templates/djangobb_forum/topic_pages.html:4
 msgid "Pages"
 msgstr "Страницы"
 
