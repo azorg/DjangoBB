@@ -8,13 +8,13 @@
 {% autopaginate posts forum_settings.TOPIC_PAGE_SIZE %}
 <div class="linkst">
 	<div class="inbox">
-		<div class="pagelink conl">{% pagination %}</div>
 		<ul>
 			<li>
 			<a href="{% url 'djangobb:index' %}">{% trans "Root" %} </a></li><li>&raquo; {% link topic.forum %} </li><li>&raquo; {{ topic.name }}
 			<a href="{% url 'djangobb:forum_topic_feed' topic.id %}"><img src="{{ STATIC_URL }}djangobb_forum/img/feed-icon-small.png" alt="[RSS Feed]" title="[RSS Feed]" class="breadcrumb_rss" /></a>
 			</li>
 		</ul>
+		<div class="pagelink">{% pagination %}</div>
 		<div class="clearer"></div>
 	</div>
 </div>
@@ -164,15 +164,17 @@
 	</div>
 </div>
 {% endfor %}
+
 <div class="postlinksb">
 	<div class="inbox">
-		<div class="pagelink conl">{% pagination %}</div>
+		<div class="pagelink">{% pagination %}</div>
 		<ul>
 			<li>
 			<a href="{% url 'djangobb:index' %}">{% trans "Root" %} </a></li><li>&raquo; {% link topic.forum %} </li><li>&raquo; {{ topic.name }}
 			<a href="{% url 'djangobb:forum_topic_feed' topic.id %}"><img src="{{ STATIC_URL }}djangobb_forum/img/feed-icon-small.png" alt="[RSS Feed]" title="[RSS Feed]" class="breadcrumb_rss" /></a>
 			</li>
 		</ul>
+
 		{% if user.is_authenticated %}
 			{% if subscribed %}
 				<a class="subscribelink clearb" href="{% url 'djangobb:forum_delete_subscription' topic.id %}?from_topic">{% trans "Unsubscribe" %}</a>
@@ -206,7 +208,7 @@
 				</optgroup>
 			{% endfor %}
 		</select>
-		<input type="button" onclick="window.location=('{% url 'djangobb:index' %}'+getElementById('forum_id').value)" value=" {% trans "Go" %} " accesskey="g" />
+		<input type="button" onclick="window.location=('{% url 'djangobb:index' %}'+getElementById('forum_id').value+'/')" value=" {% trans "Go" %} " accesskey="g" />
 		</label></div>
 	</form>
 	<dl id="modcontrols"><dt><strong>{% trans "Moderator control" %}</strong></dt>
