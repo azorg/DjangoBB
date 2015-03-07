@@ -1,6 +1,12 @@
+add page navigation in topic list
+
+block creation existing topic
+
+add feature some files attachment
+
 fix Lo-Fi pagination ("None" output) [lofi/pagination.html FIXED]
 
-fix pagiantion (overlap, etc)
+fix pagiantion (overlap, etc) [FIXED via bloodaxe in templates]
 
 fix 404 error if anonimous user search user messges from profile [user.html FIXED]
 
