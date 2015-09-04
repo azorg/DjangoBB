@@ -8,12 +8,12 @@
 {% autopaginate topics forum_settings.FORUM_PAGE_SIZE %}
 <div class="linkst">
 	<div class="inbox">
-		<div class="pagelink conl">{% pagination %}</div>
 		{% if user.is_authenticated %}
 			<p class="postlink conr"><a href="{% url 'djangobb:add_topic' forum.id %}">{% trans "New topic" %}</a></p>
 		{% endif %}
 		<ul><li><a href="{% url 'djangobb:index' %}">{% trans "Root" %}</a> </li><li>&raquo; {{ forum.name }}</li></ul>
 		<div class="clearer"></div>
+		<div class="pagelink">{% pagination %}</div>
 	</div>
 </div>
 <div id="vf" class="blocktable">
@@ -44,10 +44,13 @@
 										{% trans "Sticky:" %}
 									{% endif %}
 									{% if topic|has_unreads:user %}
-										<strong>{% link topic %} <span class="byuser">{% trans "by" %} {{ topic.user.username }}</span></strong>
+										<strong>{% link topic %} <span class="byuser">{% trans "created by" %} {{ topic.user.username }}</span></strong>
 									{% else %}
-										{% link topic %} <span class="byuser">{% trans "by" %} {{ topic.user.username }}</span>
+										{% link topic %} <span class="byuser">{% trans "created by" %} {{ topic.user.username }}</span>
 									{% endif %}
+								</div>
+								<div class="pagelink">
+									{% topic_pages topic forum_settings.TOPIC_PAGE_SIZE %}
 								</div>
 							</div>
 						</td>
@@ -66,7 +69,7 @@
 </div>
 <div class="linkst">
 	<div class="inbox">
-		<div class="pagelink conl">{% pagination %}</div>
+		<div class="pagelink">{% pagination %}</div>
 		{% if user.is_authenticated %}
 			<p class="postlink conr"><a href="{% url 'djangobb:add_topic' forum.id %}">{% trans "New topic" %}</a></p>
 		{% endif %}
@@ -89,7 +92,7 @@
 				</optgroup>
 			{% endfor %}
 		</select>
-		<input type="button" onclick="window.location=('{% url 'djangobb:index' %}'+getElementById('forum_id').value)" value=" {% trans "Go" %} " accesskey="g" />
+		<input type="button" onclick="window.location=('{% url 'djangobb:index' %}'+getElementById('forum_id').value+'/')" value=" {% trans "Go" %} " accesskey="g" />
 		</label></div>
 	</form>
 	{% if moderator %}

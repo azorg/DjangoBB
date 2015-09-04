@@ -51,10 +51,16 @@ Activate virtual python enviroment (in bash)
   source env/bin/activate
 
 
-Collect static files and create sqlite data base
-------------------------------------------------
+Collect static files
+--------------------
   
-  Edit and run ./_collect_and_sync.sh
+  Edit and run ./_collectstatic.sh
+
+
+Create data base
+----------------
+  
+  Edit and run ./_syncdb.sh
 
 
 Compile *.mo files

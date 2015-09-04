@@ -36,7 +36,8 @@
                         {% endif %}
                         <label><strong>{% trans "Message" %}</strong><br />{{ form.body.errors }}{{ form.body }}</label>
                         <p>
-                            Note: A list of all supported source code highlighter for [code <strong>XXX</strong>]...[/code] can be found here: <a href="http://pygments.org/docs/lexers/">pygments.org</a> (Use 'Short name')
+                            {% trans "Note: A list of all supported source code highlighter for [code <strong>XXX</strong>]...[/code] can be found here:" %}
+                            <a href="http://pygments.org/docs/lexers/">pygments.org</a>
                         </p>
                         <label>{{ form.subscribe }}<strong>{% trans "Subscribe this topic" %}</strong>{{ form.subscribe.errors }}<br /></label>
                     </div>
@@ -45,7 +46,7 @@
             {% if forum_settings.ATTACHMENT_SUPPORT %}
             <div class="inform">
                 <fieldset>
-                    <legend>{% trans "Attachment" %}</legend>
+                    <legend>{% trans "Attachments" %}</legend>
                     <div class="infldset">
                         {{ form.attachment.errors }}
                         <div class="rbox">

@@ -19,6 +19,8 @@ from linaro_django_pagination.templatetags.pagination_tags import paginate
 from djangobb_forum.models import Report
 from djangobb_forum import settings as forum_settings
 
+from django.template.loader import render_to_string
+import math
 
 register = template.Library()
 
@@ -59,6 +61,33 @@ def pagination(context):
 @register.inclusion_tag('djangobb_forum/lofi/pagination.html', takes_context=True)
 def lofi_pagination(context):
     return paginate(context)
+
+@register.simple_tag
+def topic_pages(topic,
+                page_size = forum_settings.TOPIC_PAGE_SIZE,
+                head      = forum_settings.TOPIC_PAGE_HEAD,
+                tail      = forum_settings.TOPIC_PAGE_TAIL):
+    """
+    Return list of A tag with links to topic pages
+
+    1 2 3 ... 8 9 10 11 12
+    ^^^^^     ^^^^^^^^^^^^
+    head=3    tail=5
+    """
+    post_count = topic.posts.all().select_related().count()
+    page_count = int(math.ceil(post_count / float(page_size))) # FIXME
+    if page_count <= head + tail + 1:
+        page_list = range(1, page_count + 1)
+    else:
+        page_list = range(1, head + 1) + [None] + \
+                    range(page_count + 1 - tail, page_count + 1)
+    return render_to_string(
+        'djangobb_forum/topic_pages.html',
+        {
+            'is_paginated': page_count > 1,
+            'absolute_url': topic.get_absolute_url(),
+            'pages':        page_list
+        })
 
 @register.simple_tag
 def link(object, anchor=''):
