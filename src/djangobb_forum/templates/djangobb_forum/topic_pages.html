@@ -1,0 +1,13 @@
+{% if is_paginated %}
+{% load i18n %}
+<div class="pagination">
+  {% trans "Pages" %}: 
+  {% for page in pages %}
+    {% if page %}
+      <a href="{{ absolute_url }}?page={{ page }}" class="page">{{ page }}</a>
+    {% else %}
+       ...
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
